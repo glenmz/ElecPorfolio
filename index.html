@@ -167,6 +167,18 @@ h2.section-h::before{content:'';width:22px;height:2px;background:var(--accent);}
 .empty-note{color:#55536a;font-size:13px;font-style:italic;padding:14px 0;}
 
 footer.credit{text-align:center;color:#3f3d52;font-size:11px;margin-top:70px;font-family:'JetBrains Mono',monospace;}
+
+/* QUIZ / EXAM PHOTO CARDS */
+.evidence-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:20px;}
+.evidence-card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:transform .2s,border-color .2s;}
+.evidence-card:hover{transform:translateY(-3px);border-color:var(--accent-dim);}
+.evidence-card a.photo-link{display:block;background:#09090d;}
+.evidence-card img{display:block;width:100%;height:210px;object-fit:contain;}
+.evidence-info{padding:14px 15px 16px;}
+.evidence-info h3{font-family:'Sora',sans-serif;font-size:14px;margin:0 0 6px;color:var(--text);}
+.evidence-info p{font-size:12px;color:var(--muted);margin:0;line-height:1.5;}
+.evidence-label{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--score);border:1px solid rgba(95,224,176,.3);background:rgba(95,224,176,.08);padding:4px 7px;border-radius:6px;margin-bottom:9px;}
+
 </style>
 </head>
 <body>
@@ -226,15 +238,37 @@ footer.credit{text-align:center;color:#3f3d52;font-size:11px;margin-top:70px;fon
   <!-- QUIZ -->
   <section class="panel" id="panel-quiz">
     <h2 class="section-h">Quiz Scores</h2>
-    <p class="empty-note">Static portfolio section. Add quiz PDFs to the <code>files</code> folder and link them in the HTML before deploying.</p>
-    <ul class="record-list" id="quizList"></ul>
+    <p class="empty-note">Quiz attempt records and scores.</p>
+    <div class="evidence-grid">
+      <article class="evidence-card">
+        <a class="photo-link" href="images/quiz-4-virtual-networking.png" target="_blank" rel="noopener"><img src="images/quiz-4-virtual-networking.png" alt="Quiz 4 - Virtual Networking Quiz attempt history"></a>
+        <div class="evidence-info"><span class="evidence-label">QUIZ 04</span><h3>Virtual Networking Quiz</h3><p>Score: 18 / 25 · 72%</p></div>
+      </article>
+      <article class="evidence-card">
+        <a class="photo-link" href="images/virtual-network-features-part-2.png" target="_blank" rel="noopener"><img src="images/virtual-network-features-part-2.png" alt="Virtual Network Features and Networking Part 2 Quiz attempt history"></a>
+        <div class="evidence-info"><span class="evidence-label">QUIZ</span><h3>Virtual Network Features and Networking Part 2</h3><p>Score: 27 / 30 · 90%</p></div>
+      </article>
+      <article class="evidence-card">
+        <a class="photo-link" href="images/long-quiz-cloud-networking-virtualization.png" target="_blank" rel="noopener"><img src="images/long-quiz-cloud-networking-virtualization.png" alt="Long Quiz - Cloud Networking and Virtualization Quiz attempt history"></a>
+        <div class="evidence-info"><span class="evidence-label">LONG QUIZ</span><h3>Cloud Networking and Virtualization</h3><p>Score: 44 / 45 · 98%</p></div>
+      </article>
+    </div>
   </section>
 
   <!-- EXAM -->
   <section class="panel" id="panel-exam">
     <h2 class="section-h">Exam Scores</h2>
-    <p class="empty-note">Static portfolio section. Add exam PDFs to the <code>files</code> folder and link them in the HTML before deploying.</p>
-    <ul class="record-list" id="examList"></ul>
+    <p class="empty-note">Prelim and midterm exam records.</p>
+    <div class="evidence-grid">
+      <article class="evidence-card">
+        <a class="photo-link" href="images/cloud-computing-midterm-exam.png" target="_blank" rel="noopener"><img src="images/cloud-computing-midterm-exam.png" alt="Cloud Computing Midterm Examination attempt history"></a>
+        <div class="evidence-info"><span class="evidence-label">MIDTERM EXAM</span><h3>Cloud Computing Midterm Examination</h3><p>Score: 68 / 70 · 97%</p></div>
+      </article>
+      <article class="evidence-card">
+        <a class="photo-link" href="images/elective-3-prelim-exam.jpg" target="_blank" rel="noopener"><img src="images/elective-3-prelim-exam.jpg" alt="Elective 3 Cloud Computing and Emerging Technology prelim exam paper"></a>
+        <div class="evidence-info"><span class="evidence-label">PRELIM EXAM</span><h3>Elective 3 — Cloud Computing and Emerging Technology</h3><p>Photo of the prelim examination answer sheet.</p></div>
+      </article>
+    </div>
   </section>
 
   <!-- LABORATORY -->
